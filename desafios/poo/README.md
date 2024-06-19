@@ -1,17 +1,20 @@
-### Exemplo de Diagrama UML (Mermaid)
+### Diagrama UML (Mermaid)
 ```mermaid
 classDiagram
     class ReprodutorMusical {
+        <<interface>>
         +exemploMetodo1()
         +exemploMetodo2(String exemplo)
     }
 
     class AparelhoTelefonico {
+        <<interface>>
         +exemploMetodo1()
         +exemploMetodo2(String exemplo)
     }
 
     class NavegadorInternet {
+        <<interface>>
         +exemploMetodo1()
         +exemploMetodo2(String exemplo)
     }
@@ -19,7 +22,7 @@ classDiagram
     class iPhone {
     }
 
-    iPhone --> ReprodutorMusical
-    iPhone --> AparelhoTelefonico
-    iPhone --> NavegadorInternet
+    iPhone <-- ReprodutorMusical
+    iPhone <-- AparelhoTelefonico
+    iPhone <-- NavegadorInternet
 ```
