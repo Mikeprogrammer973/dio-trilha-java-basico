@@ -1,28 +1,31 @@
-### Diagrama UML (Mermaid)
+### iPhone Diagrama UML (Mermaid)
 ```mermaid
 classDiagram
     class ReprodutorMusical {
         <<interface>>
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
+        +tocar() void
+        +pausar() void
+        +selecionarMusica(String musica) void
     }
 
     class AparelhoTelefonico {
         <<interface>>
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
+        +ligar(String numero) void
+        +atender() void
+        +iniciarCorreioVoz() void
     }
 
     class NavegadorInternet {
         <<interface>>
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
+        +exibirPagina(String url) void
+        +adicionarNovaAba() void
+        +atualizarPagina() void
     }
 
     class iPhone {
     }
 
-    iPhone <-- ReprodutorMusical
-    iPhone <-- AparelhoTelefonico
-    iPhone <-- NavegadorInternet
+    iPhone --> ReprodutorMusical : implements
+    iPhone --> AparelhoTelefonico : implements
+    iPhone --> NavegadorInternet : implements
 ```
