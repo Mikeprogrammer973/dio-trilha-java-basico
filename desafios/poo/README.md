@@ -1,4 +1,25 @@
+### Exemplo de Diagrama UML (Mermaid)
+```mermaid
 classDiagram
-    Customer "1" --> "*" Ticket
-    Student "1" --> "1..*" Course
-    Galaxy --> "many" Star : Contains
+    class ReprodutorMusical {
+        +exemploMetodo1()
+        +exemploMetodo2(String exemplo)
+    }
+
+    class AparelhoTelefonico {
+        +exemploMetodo1()
+        +exemploMetodo2(String exemplo)
+    }
+
+    class NavegadorInternet {
+        +exemploMetodo1()
+        +exemploMetodo2(String exemplo)
+    }
+
+    class iPhone {
+    }
+
+    iPhone --> ReprodutorMusical
+    iPhone --> AparelhoTelefonico
+    iPhone --> NavegadorInternet
+```
